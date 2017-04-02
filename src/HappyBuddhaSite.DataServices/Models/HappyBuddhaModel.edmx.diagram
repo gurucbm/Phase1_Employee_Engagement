@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="47ed337bd5184a568078fc1a248e270f" Name="Diagram1">
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.AspNetRoleClaims" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.AspNetRoles" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.AspNetUserClaims" Width="1.5" PointX="8.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.AspNetUserLogins" Width="1.5" PointX="8.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.AspNetUsers" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.AspNetUserTokens" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.Avatar" Width="1.5" PointX="3.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.Location" Width="1.5" PointX="3.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.SelfReview" Width="1.5" PointX="11.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.Sprint" Width="1.5" PointX="9" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.Team" Width="1.5" PointX="11.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.TeamCycle" Width="1.5" PointX="9" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.TeamReview" Width="1.5" PointX="11.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.Tribe" Width="1.5" PointX="3.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.UserAvatar" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.UserLevel" Width="1.5" PointX="3.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HappyBuddhaSite.DataServices.Models.UserTeam" Width="1.5" PointX="13.5" PointY="12.125" IsExpanded="true" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_AspNetRoleClaims_AspNetRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_AspNetUserClaims_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_AspNetUserLogins_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_AspNetUsers_Avatar_AvatarId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_AspNetUsers_Location_LocationId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_AspNetUsers_Tribe_TribeId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_AspNetUsers_UserLevel_LevelId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_SelfReview_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_Team_AspNetUsers_DirectorId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_Team_AspNetUsers_LeadId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_Team_AspNetUsers_VicePresidentId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_TeamReview_AspNetUsers_MemberId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_TeamReview_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_UserAvatar_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_UserTeam_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_UserAvatar_Avatar_AvatarId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_SelfReview_Sprint_CurrentSprintId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_Team_Sprint_CurrentSprintId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_TeamReview_Sprint_CurrentSprintId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_Team_TeamCycle_CycleId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.FK_UserTeam_Team_TeamId" ManuallyRouted="false" />
+        <AssociationConnector Association="HappyBuddhaSite.DataServices.Models.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

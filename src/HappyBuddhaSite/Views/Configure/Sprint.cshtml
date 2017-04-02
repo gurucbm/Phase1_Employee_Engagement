@@ -1,0 +1,111 @@
+﻿
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Configure Team Sprints</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="@Url.Action("Index", "Home")">Home</a>
+            </li>
+            <li>
+                <strong>Team Sprints</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Team Sprints</h5>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Team</label>
+                            <div class="col-sm-10"><p class="form-control-static">Little Buddhas</p></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Recent Reviews</label>
+                            <div class="col-sm-7">
+                                <select class="form-control m-b" name="entryForDate">
+                                    <option itemid="4">10/17/2016</option>
+                                    <option itemid="4">10/03/2016</option>
+                                    <option itemid="5">09/19/2016</option>
+                                    <option itemid="6">09/05/2016</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Project</label>
+                            <div class="col-sm-10">
+                                <input placeholder="Project name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Sprint</label>
+                            <div class="col-sm-10">
+                                <input placeholder="Sprint name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">During Cycle<br /></label>
+                            <div class="col-sm-10">
+                                <div class="checkbox i-checks">
+                                    <label>
+                                        <input type="checkbox" value=""> <i></i>Team released to Production
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-sm-8">
+                                <button class="btn btn-primary btn-success" type="submit">Update</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/lib/iCheck/custom.css" />
+}
+
+@section Scripts {
+    <environment names="Development,Staging,Productio">
+        <script src="~/lib/iCheck/icheck.min.js"></script>
+        <script src="~/lib_bower/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+    </environment>
+
+    <script type="text/javascript">
+
+        $('#dateJoined .input-group.date').datepicker({
+            startView: 1,
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+
+    </script>
+}
+

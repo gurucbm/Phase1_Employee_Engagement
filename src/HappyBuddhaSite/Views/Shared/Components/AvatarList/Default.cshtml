@@ -1,0 +1,12 @@
+﻿@model IEnumerable<HappyBuddhaSite.ViewModels.AvatarViewModel>
+
+<div data-bind="controller: 'Components/AvatarController'">
+	<input name="AvatarId" type="hidden" readonly data-bind="value: AvatarId" />
+	<div class="Avatar-List">
+		<span data-bind="foreach: Items">
+			<a href="#" class="Avatar-Icon" data-bind="click: function () { $parent.Select(this) }, style: { 'background-image': 'url(\'/api/Avatar/' + Id() + '\')' }, css: { active: IsSelected }"></a>
+		</span>
+		<span class="Avatar-Icon Avatar-Add fa fa-plus" data-bind="visible: CanAdd, click: function () { New($('#uploadBtn')) }" ></span>
+		<input id="uploadBtn" type="file" name="files" class="upload hidden" data-bind="event: { change: function() { Upload($element.files[0]) } }" />
+	</div>
+</div>

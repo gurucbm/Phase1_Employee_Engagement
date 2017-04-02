@@ -1,0 +1,60 @@
+﻿@model HappyBuddhaSite.ViewModels.RegisterViewModel
+
+@section StyleSheet
+{
+	<link rel="stylesheet" href="~/Framework/StyleSheet/style.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/Framework/StyleSheet/style-responsive.css" asp-append-version="true" />
+
+}
+
+<div class="registration-img-body">
+	<div class="container">
+		<form asp-controller="Account" asp-action="Register" method="post" class="registration-form">
+			<div class="registration-wrap">
+				<p class="registration-img"><i class="icon_lock_alt"></i></p>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<input class="form-control" placeholder="Username" required="" asp-for="UserName">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="icon_profile"></i></span>
+					<input class="form-control" placeholder="First name" required="" asp-for="FirstName">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="icon_profile"></i></span>
+					<input class="form-control" placeholder="Last name" required="" asp-for="LastName">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="icon_profile"></i></span>
+					<input class="form-control" placeholder="Nick name" required="" asp-for="NickName">
+				</div>
+
+				<div class="input-group">
+					<div class="col-sm-12 col-sm-offset-0">
+						@await Component.InvokeAsync("AvatarList")
+					</div>
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+					<input class="form-control" placeholder="Birth Date" required="" asp-for="BirthDate" />
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-address-book"></i></span>
+					<input type="email" class="form-control" placeholder="Email address" required="" asp-for="Email" />
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-star"></i></span>
+					<input type="password" class="form-control" placeholder="Password" required="" asp-for="Password">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-star"></i></span>
+					<input type="password" class="form-control" placeholder="Password Confirmation" required="" asp-for="ConfirmPassword" />
+				</div>
+				<br />
+				<button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+
+			</div>
+		</form>
+	</div>
+</div>

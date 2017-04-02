@@ -1,0 +1,795 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Creative - Bootstrap Admin Template</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/admin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="/admin/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="/admin/css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="/admin/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- full calendar css-->
+    <link href="/admin/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <link href="/admin/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <!-- easy pie chart-->
+    <link href="/admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="/admin/css/owl.carousel.css" type="text/css">
+    <link href="/admin/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/admin/css/fullcalendar.css">
+    <link href="/admin/css/widgets.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
+    <link href="/admin/css/style-responsive.css" rel="stylesheet" />
+    <link href="/admin/css/xcharts.min.css" rel=" stylesheet">
+    <link href="/admin/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <!-- =======================================================
+        Theme Name: NiceAdmin
+        Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+        Author: BootstrapMade
+        Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<body>
+    <!-- container section start -->
+    <section id="container" class="">
+
+
+        <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="/Admin/Dashboard/index" class="logo">Happy <span class="lite">Buddha</span></a>
+            <!--logo end-->
+            <!--  search form start
+              <div class="nav search-row" id="top_menu">
+
+                  <ul class="nav top-menu">
+                      <li>
+                          <form class="navbar-form">
+                              <input class="form-control" placeholder="Search" type="text">
+                          </form>
+                      </li>
+                  </ul>
+
+              </div>search form end -->
+
+            <div class="top-nav notification-row">
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+
+                    <!-- task notificatoin start -->
+                    @*<li id="task_notificatoin_bar" class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-task-l"></i>
+                                <span class="badge bg-important">6</span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <div class="notify-arrow notify-arrow-blue"></div>
+                                <li>
+                                    <p class="blue">You have 6 pending self reviews</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">Design PSD </div>
+                                            <div class="percent">90%</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                                <span class="sr-only">90% Complete (success)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">
+                                                Project 1
+                                            </div>
+                                            <div class="percent">30%</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                                <span class="sr-only">30% Complete (warning)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">Digital Marketing</div>
+                                            <div class="percent">80%</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% Complete</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">Logo Designing</div>
+                                            <div class="percent">78%</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%">
+                                                <span class="sr-only">78% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">Mobile App</div>
+                                            <div class="percent">50%</div>
+                                        </div>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                                <span class="sr-only">50% Complete</span>
+                                            </div>
+                                        </div>
+
+                                    </a>
+                                </li>
+                                <li class="external">
+                                    <a href="#">See All Tasks</a>
+                                </li>
+                            </ul>
+                        </li>*@
+                    <!-- task notificatoin end -->
+                    <!-- inbox notificatoin start-->
+                    @*<li id="mail_notificatoin_bar" class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-envelope-l"></i>
+                                <span class="badge bg-important">5</span>
+                            </a>
+                            <ul class="dropdown-menu extended inbox">
+                                <div class="notify-arrow notify-arrow-blue"></div>
+                                <li>
+                                    <p class="blue">You have 5 new messages</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="photo"><img alt="avatar" src="/admin/img/avatar-mini.jpg"></span>
+                                        <span class="subject">
+                                            <span class="from">Greg  Martin</span>
+                                            <span class="time">1 min</span>
+                                        </span>
+                                        <span class="message">
+                                            I really like this admin panel.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="photo"><img alt="avatar" src="/admin/img/avatar-mini2.jpg"></span>
+                                        <span class="subject">
+                                            <span class="from">Bob   Mckenzie</span>
+                                            <span class="time">5 mins</span>
+                                        </span>
+                                        <span class="message">
+                                            Hi, What is next project plan?
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="photo"><img alt="avatar" src="/admin/img/avatar-mini3.jpg"></span>
+                                        <span class="subject">
+                                            <span class="from">Phillip   Park</span>
+                                            <span class="time">2 hrs</span>
+                                        </span>
+                                        <span class="message">
+                                            I am like to buy this Admin Template.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="photo"><img alt="avatar" src="/admin/img/avatar-mini4.jpg"></span>
+                                        <span class="subject">
+                                            <span class="from">Ray   Munoz</span>
+                                            <span class="time">1 day</span>
+                                        </span>
+                                        <span class="message">
+                                            Icon fonts are great.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">See all messages</a>
+                                </li>
+                            </ul>
+                        </li>*@
+                    <!-- inbox notificatoin end -->
+                    <!-- alert notification start-->
+                    <li id="alert_notificatoin_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                            <i class="icon-bell-l"></i>
+                            <span class="badge bg-important">3</span>
+                        </a>
+                        <ul class="dropdown-menu extended notification">
+                            <div class="notify-arrow notify-arrow-blue"></div>
+                            <li>
+                                <p class="blue">You have 3 new notifications</p>
+                            </li>
+                            @*<li>
+                                    <a href="#">
+                                        <span class="label label-primary"><i class="icon_profile"></i></span>
+                                        Friend Request
+                                        <span class="small italic pull-right">5 mins</span>
+                                    </a>
+                                </li>*@
+                            <li>
+                                <a href="#">
+                                    <span class="label label-warning"><i class="icon_pin"></i></span>
+                                    Current sprint is ending in 4 days
+                                    <span class="small italic pull-right">50 mins</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-danger"><i class="icon_book_alt"></i></span>
+                                    1 more day left for self review
+                                    <span class="small italic pull-right">1 hr</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-success"><i class="icon_like"></i></span>
+                                    Your DevLead gave you a good review
+                                    <span class="small italic pull-right"> Today</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">See all notifications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- alert notification end-->
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="/admin/img/avatar6_small.jpg">
+                            </span>
+                            <span class="username">Leonard Lead</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+                            <li>
+                                <a href="selfreview"><i class="icon_genius"></i> Login as Normal Member</a>
+                            </li>
+                            @*<li>
+                                    <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="icon_clock_alt"></i> Timeline</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="icon_chat_alt"></i> Chats</a>
+                                </li>*@
+                            <li>
+                                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
+                            </li>
+                            @*<li>
+                                    <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
+                                </li>*@
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+        </header>
+        <!--header end-->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li>
+                        <a class="" href="leaddashboard">
+                            <i class="icon_house_alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="teamreview">
+                            <i class="social_myspace"></i>
+                            <span>Team Review</span>
+
+                        </a>
+
+                    </li>
+                    <li>
+                        <a class="" href="history">
+                            <i class="icon_table"></i>
+                            <span>History</span>
+
+                        </a>
+
+                    </li>
+                    <li class="active">
+                        <a class="" href="sprintreview">
+                            <i class="icon_datareport"></i>
+                            <span>Sprint Review</span>
+
+                        </a>
+
+                    </li>
+                    <li>
+                        <a class="" href="administration">
+                            <i class="icon_cogs"></i>
+                            <span>Administration</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="page-header"><i class="fa fa-users"></i> Sprint Review</h3>
+                        <ol class="breadcrumb">
+                            <li><i class="fa fa-home"></i><a href="/Admin/Dashboard/index">Home</a></li>
+                            <li><i class="fa fa-users"></i>Sprint Review</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="social-box review-info team-name">
+                            TEAM
+                            <div class="score">Lightning</div>
+                        </div><!--/social-box-->
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                        <div class="social-box review-info dater">
+                            TRIBE
+                            <div class="score">CORE DEV</div>
+                        </div><!--/social-box-->
+
+                    </div><!--/col-->
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                        <div class="social-box review-info sprint">
+                            SPRINT NAME
+                            <div class="score">Site.2016.25 Sprint #2</div>
+                        </div><!--/social-box-->
+
+                    </div><!--/col-->
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                        <div class="social-box review-info ">
+                            DUE DATE
+                            <div class="score">11/25/2016</div>
+                        </div><!--/social-box-->
+
+                    </div><!--/col-->
+                </div>
+
+                <div class="row">
+                    <!-- chart morris start -->
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                <h3>Various Reports</Char>
+                            </header>
+                            <div class="panel-body">
+                                <div class="tab-pane" id="chartjs">
+                                    <div class="row">
+                                        <!-- Line -->
+                                        <div class="col-lg-6">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    Line
+                                                </header>
+                                                <div class="panel-body text-center">
+                                                    <canvas id="line" height="300" width="450"></canvas>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <!-- Pie -->
+                                        <div class="col-lg-6">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    Pie
+                                                </header>
+                                                <div class="panel-body text-center">
+                                                    <canvas id="pie" height="300" width="400"></canvas>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="row hidden">
+                                        <!-- Radar -->
+                                        <div class="col-lg-6">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    Radar
+                                                </header>
+                                                <div class="panel-body text-center">
+                                                    <canvas id="radar" height="300" width="400"></canvas>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <!-- Polar Area -->
+                                        <div class="col-lg-6">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    Polar Area
+                                                </header>
+                                                <div class="panel-body text-center">
+                                                    <canvas id="polarArea" height="300" width="400"></canvas>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="row hidden">
+
+                                        <!-- Bar -->
+                                        <div class="col-lg-6">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    Bar
+                                                </header>
+                                                <div class="panel-body text-center">
+                                                    <canvas id="bar" height="300" width="500"></canvas>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <!-- Doughnut -->
+                                        <div class="col-lg-6">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    Doughnut
+                                                </header>
+                                                <div class="panel-body text-center">
+                                                    <canvas id="doughnut" height="300" width="400"></canvas>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <div class="social-box you">
+                                YOUR TEAM
+                                <div class="score"><div class="circle">4.0</div></div>
+                                <ul>
+                                    <li>
+                                        <strong>3.4</strong>
+                                        <span>Team</span>
+                                    </li>
+                                    <li>
+                                        <strong>3.5</strong>
+                                        <span>Company</span>
+                                    </li>
+                                </ul>
+                            </div><!--/social-box-->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                            <div class="social-box overall">
+                                DEV TRIBE
+                                <div class="score"><div class="circle">3.2</div></div>
+                                <ul>
+                                    <li>
+                                        <strong>3.1</strong>
+                                        <span>Team</span>
+                                    </li>
+                                    <li>
+                                        <strong>3.0</strong>
+                                        <span>Company</span>
+                                    </li>
+                                </ul>
+                            </div><!--/social-box-->
+
+                        </div><!--/col-->
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                            <div class="social-box company">
+                                QA TRIBE
+                                <div class="score"><div class="circle">3.8</div></div>
+                                <ul>
+                                    <li>
+                                        <strong>3.6</strong>
+                                        <span>Team</span>
+                                    </li>
+                                    <li>
+                                        <strong>4.1</strong>
+                                        <span>Company</span>
+                                    </li>
+                                </ul>
+                            </div><!--/social-box-->
+
+                        </div><!--/col-->
+
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                            <div class="social-box team">
+                                OVERALL
+                                <div class="score"><div class="circle">3.9</div></div>
+                                <ul>
+                                    <li>
+                                        <strong>3.2</strong>
+                                        <span>Team</span>
+                                    </li>
+                                    <li>
+                                        <strong>3.9</strong>
+                                        <span>Company</span>
+                                    </li>
+                                </ul>
+                            </div><!--/social-box-->
+
+                        </div><!--/col-->
+
+                    </div>
+
+                    <div class="row">
+                        <!-- chart morris start -->
+                        <div class="col-lg-12">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    <h3>Suggestions</h3>
+                                </header>
+                                <div class="panel-body">
+                                    <div class="tab-pane">
+                                        <div class="profile-activity">
+                                            <div class="act-time">
+                                                <div class="activity-body act-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <a href="#" class="activity-img"><img class="avatar" src="/admin/img/rikki.jpg" alt=""></a>
+                                                        <p class="attribution"><a href="#">Rikki Rocket</a> at 4:25pm, 23th November 2016</p>
+                                                        <p>Everything that has a beginning has an end.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-time">
+                                                <div class="activity-body act-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <a href="#" class="activity-img"><img class="avatar" src="/admin/img/guru.png" alt=""></a>
+                                                        <p class="attribution"><a href="#">Guru </a> at 5:25am, 30th September 2016</p>
+                                                        <p><b>What went well</b><br />
+                                                            <ol>
+                                                                <li>
+                                                                    As a team I appreciate the team patient with all the things happened during this sprint
+                                                                
+                                                                    </li>
+                                                                <li>
+                                                                    Appreciate that Dev team handle the SEO selenium to be created and QA able to review last Friday. That is the spirit!! Even its just a small thing, it give big impact ..
+                                                                </li>
+                                                            </ol></p>
+<p><b>What we need to improve for future</b><br />
+    <ol>
+        <li>
+            The “management planner” need to inform the team earlier for any changes  at least the first week, and not the 2nd week 2 days before sign off
+        </li>
+        <li>
+            QA need to know changes to the code, >> What is the impact and what we need to focus(Dev need to inform this information to QA) ? >>Everytime any code changes, developer need to know overall what is the impact in term of coding, because QA might can tell, but QA knowledge is not extended that we can know based on the ticket information.
+        </li>
+    </ol></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-time">
+                                                <div class="activity-body act-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <a href="#" class="activity-img"><img class="avatar" src="/admin/img/azriana.png" alt=""></a>
+                                                        <p class="attribution"><a href="#">Azriana</a> at 8:25am, 30th September 2016</p>
+                                                        <p>We should improve on our timing of the Daily standup(DS) meeting. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-time">
+                                                <div class="activity-body act-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <a href="#" class="activity-img"><img class="avatar" src="/admin/img/rizal2.png" alt=""></a>
+                                                        <p class="attribution"><a href="#">Rizal</a> at 5:25am, 19th November 2016</p>
+                                                        <p>
+                                                            We need some document for dev to quickly check channel config for any features
+                                                            For example:  stynamic has what channel config. Meta custom has what channel config, Solr and other feature.
+                                                        </p><p>I think we need to compile list of channel config and it’s feature.
+</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-time">
+                                                <div class="activity-body act-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <a href="#" class="activity-img"><img class="avatar" src="/admin/img/jijot.png" alt=""></a>
+                                                        <p class="attribution"><a href="#">Jijot</a> at 9:45am, 20th November 2016</p>
+                                                        <p>
+                                                            <b>What went well:</b><br />
+                                                            <ol>
+                                                                <li>A very good team player and team spirit among us!</li>
+
+                                                                <li>Good communication between DEV, QA and PROD</li>
+                                                                <li>PROD (Sander) gave a very good cooperation and can compromise if there is any limitation on the implementation. Claps! Claps!</li>
+                                                            </ol>
+                                                        </p>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-time">
+                                                <div class="activity-body act-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <a href="#" class="activity-img"><img class="avatar" src="/admin/img/vijay.png" alt=""></a>
+                                                        <p class="attribution"><a href="#">Vijay</a> at 4:00pm, 6th November 2016</p>
+                                                        <p>
+                                                            <ol>
+                                                                <li>
+                                                                    Need dev to responsible on the tickets in CQ, please update the tickets with the information, not only put changelist. QA need to know is it already deployed in VM? is peer test tested? QA ready to test or not?
+                                                                </li>
+                                                                <li>
+                                                                    Scenario: When the VM is down, and when Aaron is not in, the env will be down until Aaron back online.
+                                                                </li>
+                                                                <li>We shld improve on deployment, no more new deployment on Thursday onwards unless critical. Need to inform QA.</li>
+                                                            </ol>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-time">
+                                                <div class="activity-body act-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <a href="#" class="activity-img"><img class="avatar" src="/admin/img/aaron.png" alt=""></a>
+                                                        <p class="attribution"><a href="#">Aaron Wee</a> at 5:25pm, 21th November 2016</p>
+                                                        <p>Dev having a good sharing attitude to share the information/issue that they found  for QA to focus on during testing. Thank you for sharing , by doing this communication and understanding between the team will be better because we understand each other.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-time">
+                                                <div class="activity-body act-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <a href="#" class="activity-img"><img class="avatar" src="/admin/img/asad.png" alt=""></a>
+                                                        <p class="attribution"><a href="#">Asad</a> at 5:23pm, 30th October 2016</p>
+                                                        <p>
+                                                            Team are helping each other. Eg; when working on webadmin remove jobs I have roadblock, thanks to guru and rizal(aka webadmin sifu) for helping.
+                                                        </p><p>Thanks qa for finding issues in our code, eg remove jobs in webadmin.
+</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>  
+            </section>
+        </section>
+    </section>
+    <!-- container section start -->
+    <!-- javascripts -->
+    <script src="/admin/js/jquery.js"></script>
+    <script src="/admin/js/jquery-1.8.3.min.js"></script>
+    <script src="/admin/js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="/admin/js/jquery.scrollTo.min.js"></script>
+    <script src="/admin/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!-- chartjs -->
+    <script src="/admin/assets/chart-master/Chart.js"></script>
+    <!-- custom chart script for this page only-->
+    <script src="/admin/js/chartjs-custom.js"></script>
+    <!--custome script for all page-->
+    <script src="/admin/js/scripts.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    var options = {
+        height: 400,
+        isStacked: true,
+        series: {
+            1: { lineDashStyle: [14, 2, 7, 2] }
+        },
+        colors: ['#4374e0', '#FFA500'],
+        vAxis: {
+            title: "Happiness Level",
+            viewWindowMode: 'explicit',
+            viewWindow: {
+                max: 100,
+                min: 0
+            }
+        },
+        hAxis: {
+            title: "Sprint"
+        }
+    };
+    google.charts.setOnLoadCallback(drawChartTeam);
+
+    function drawChartTeam() {
+        var jsonData = $.ajax({
+            url: '@Url.Action("GetChartDataTeam", "Reports")',
+            dataType: "json",
+            async: false
+        }).responseText;
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Sprint');
+        data.addColumn('number', 'Self');
+        data.addColumn('number', 'Team');
+
+        $.each(JSON.parse(jsonData), function (index, obj) {
+            data.addRow([obj.SprintNumber, obj.MyScore, obj.CompareScore]);
+        });
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div_team'));
+        chart.draw(data, options);
+    }
+
+    $(document).ready(function () {
+
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            alert("heree");
+            var target = $(e.target).attr("href") // activated tab
+            switch (target) {
+                case "#withteam":
+                    drawChartTeam();
+                    break;
+                case "#withcompany":
+                    drawChartCompany();
+                    break;
+                default:
+            }
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>

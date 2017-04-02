@@ -1,0 +1,20 @@
+{
+	"compilerOptions":
+	{
+		"module": "amd",
+		"sourceMap": true,
+		"types":
+		[
+			"requirejs",
+			"jquery",
+			"nprogress",
+			"knockout",
+			"knockout.mapping"
+		],
+		"typeRoots":
+		[
+			"./node_modules/@types"
+		]
+	},
+	"compileOnSave": true
+}

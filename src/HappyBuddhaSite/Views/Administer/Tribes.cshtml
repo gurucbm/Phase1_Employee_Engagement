@@ -1,0 +1,30 @@
+﻿@using HappyBuddhaSite.ViewModels
+@using HappyBuddhaSite.Core.Data
+
+@{
+    ViewData["Title"] = "Tribes Management";
+}
+
+@section ExtraTabs
+{
+    <li><a href="@Url.Action("Users", "Administer")">Users</a></li>
+    <li><a href="@Url.Action("Levels", "Administer")">Levels</a></li>
+    <li><a href="@Url.Action("Locations", "Administer")">Locations</a></li>
+    <li><a href="@Url.Action("Roles", "Administer")">Roles</a></li>
+    <li><a href="@Url.Action("Teams", "Administer")">Teams</a></li>
+    <li class="active"><a href="@Url.Action("Tribes", "Administer")">Tribes</a></li>
+}
+
+<div class="row">
+    <div class="container">
+        <h2>Tribes</h2>
+        <p>These are the tribes registered in the system:</p>
+        <div style="margin-left:20px">
+            <table id="jqGrid"></table>
+            <div id="jqGridPager"></div>
+        </div>
+
+        <table id="grid" data-source="@Url.Action("GetTribes")"></table>
+        
+    </div>
+</div>

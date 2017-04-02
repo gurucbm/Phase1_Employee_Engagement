@@ -1,0 +1,56 @@
+﻿@using HappyBuddhaSite.ViewModels
+@using HappyBuddhaSite.Core.Data
+
+@model IEnumerable<User>
+
+@section ExtraTabs
+{
+	<li><a href="@Url.Action("Team", "Configure")">Team Building</a></li>
+	<li class="active"><a href="@Url.Action("Members", "Configure")">Members</a></li>
+}
+<div class="row">
+	<div class="col-md-12">
+		<p>Here are the members of your team. You can invite anyone using their email.</p>
+	</div>
+</div>
+<div class="row">
+	@if (this.Model != null)
+			{
+				foreach (var item in this.Model)
+				{
+				<div class="col-md-5">
+					<div class="box box-widget widget-user">
+						<div class="widget-user-header bg-buddha">
+							<h3 class="widget-user-username">@item.LastName, @item.FirstName</h3>
+							<h5 class="widget-user-desc">@item.NickName</h5>
+						</div>
+						<div class="widget-user-image">
+							<span class="Avatar-Icon Avatar-Icon-lg" style="background-image: url('/api/Avatar/@item.AvatarId')"></span>
+						</div>
+						<div class="box-footer">
+							<div class="row">
+								<div class="col-sm-4 border-right">
+									<div class="description-block">
+										<h5 class="description-header">4.2</h5>
+										<span class="description-text">RATE</span>
+									</div>
+								</div>
+								<div class="col-sm-4 border-right">
+									<div class="description-block">
+										<h5 class="description-header">13,000</h5>
+										<span class="description-text">FOLLOWERS</span>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="description-block">
+										<h5 class="description-header">35</h5>
+										<span class="description-text">PRODUCTS</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				}
+	}
+</div>

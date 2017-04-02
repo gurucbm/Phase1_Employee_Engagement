@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using HappyBuddhaSite.Core.Data
+
+@inject SignInManager<User> SignInManager
+
+<!DOCTYPE html>
+<html data-bind="controller: 'Application'">
+<head data-bind="with: Model">
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title data-bind="text: Title"></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	@Html.Partial("_HeaderResources")
+
+	@RenderSection("StyleSheet", false)
+
+</head>
+<body class="fixed-nav">
+
+	@RenderBody()
+
+</body>
+</html>

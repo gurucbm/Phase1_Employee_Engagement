@@ -1,0 +1,98 @@
+{
+  "id": "10fd0410-1746-4d66-b7a1-646dbeecf7ff",
+  "name": "SQLDacpacDeploy",
+  "friendlyName": "SQL Dacpac Deploy",
+  "description": "Use SQLPackage to deploy a DACPAC to remote machine",
+  "author": "James Dibble",
+  "category": "Deploy",
+  "visibility": [
+    "Release"
+  ],
+  "demands": [ ],
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.83.0",
+  "instanceNameFormat": "Deploy DACPAC: $(Dacpac)",
+  "inputs": [
+    {
+      "name": "Dacpac",
+      "type": "filePath",
+      "label": "DACPAC Package",
+      "required": true
+    },
+    {
+      "name": "PackageDestinations",
+      "type": "pickList",
+      "label": "Deployment Machine Group",
+      "defaultValue": "",
+      "required": true
+    },
+    {
+        "name":"ResourceFilteringMethod",
+        "type":"radio",
+        "label":"Select Machines By",
+        "required":false,
+        "defaultValue":"machineNames",
+        "options": {
+            "machineNames":"Machine Names",
+            "tags":"Tags"
+        }
+    },
+    {
+        "name": "ResourceFilter",
+        "type": "string",
+        "label": "Filter Criteria",
+        "defaultValue": "",
+        "required": false,
+        "helpMarkDown": "Provide a list of machines like `dbserver.fabrikam.com`, `dbserver_int.fabrikam.com`, `192.168.12.34` or tags like `Role:DB;OS:Win8.1`. Returns machines with either of the tags. For Azure Resource Group provide the VM Host Name for the machine name. The default is all machines in the machine group."
+    },
+    {
+      "name": "Database",
+      "type": "string",
+      "label": "Database",
+      "required": true
+    },
+    {
+        "name":"DeploymentMethod",
+        "type":"radio",
+        "label":"Deployment Method",
+        "required":true,
+        "helpMarkDown": "How the DACPAC upgrade should be performed.  If the SQL user doesn't have `sysadmin` rights, you will need to use **Script**",
+        "defaultValue":"script",
+        "options": {
+            "script":"Script",
+            "publish":"Publish"
+        }
+    },
+    {
+      "name": "AdditonalSqlPackageParameters",
+      "type": "string",
+      "label": "Additional SqlParameter.exe Parameters",
+      "required": false
+    },
+    {
+      "name": "AdditonalSqlCmdParameters",
+      "type": "string",
+      "label": "Additional SqlCmd.exe Parameters",
+      "required": false
+    }
+  ],
+  "sourceDefinitions": [
+    {
+      "target": "PackageDestinations",
+      "endpoint": "/$(system.teamProject)/_apis/vslabs/environments",
+      "selector": "jsonpath:$.value[*].name",
+      "authKey": "tfs:DevTestLabs"
+    }
+  ],
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\SQLDacpacDeploy.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}

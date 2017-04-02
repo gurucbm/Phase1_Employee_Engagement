@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using HappyBuddhaSite.Core.Data
+
+@inject SignInManager<User> SignInManager
+
+<span data-bind="controller: 'Components/ProfileController'">
+	<span style="vertical-align:middle">
+		@if (this.SignInManager.IsSignedIn(this.User))
+		{
+		<a asp-controller="Account" asp-action="LogOff" class="a">Logout</a>
+		}
+		else if (this.ViewData["IsLoginPage"] == null)
+		{
+		<a asp-controller="Account" asp-action="Login" class="a">Login</a>
+		}
+	</span>
+</span>

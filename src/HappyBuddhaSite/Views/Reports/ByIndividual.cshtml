@@ -1,0 +1,113 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+
+@{
+    ViewData["Title"] = "Happy Buddha...";
+}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    var options = {
+        height: 400,
+        isStacked: true,
+        series: {
+            1: { lineDashStyle: [14, 2, 7, 2] }
+        },
+        colors: ['#4374e0', '#FFA500'],
+        vAxis: {
+            title: "Happiness Level",
+            viewWindowMode: 'explicit',
+            viewWindow: {
+                max: 100,
+                min: 0
+            }
+        },
+        hAxis: {
+            title: "Sprint"
+        }
+    };
+    google.charts.setOnLoadCallback(drawChartTeam);
+
+    function drawChartTeam() {
+        var jsonData = $.ajax({
+            url: '@Url.Action("GetChartDataTeam", "Reports")',
+            dataType: "json",
+            async: false
+        }).responseText;
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Sprint');
+        data.addColumn('number', 'Self');
+        data.addColumn('number', 'Team');
+     
+        $.each(JSON.parse(jsonData), function (index, obj) {
+            data.addRow([obj.SprintNumber, obj.MyScore, obj.CompareScore]);
+        });
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div_team'));
+        chart.draw(data, options);
+    }
+
+    function drawChartCompany() {
+        var jsonData = $.ajax({
+            url: '@Url.Action("GetChartDataCompany", "Reports")',
+            dataType: "json",
+            async: false
+        }).responseText;
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Sprint');
+        data.addColumn('number', 'Self');
+        data.addColumn('number', 'Company');
+
+        $.each(JSON.parse(jsonData), function (index, obj) {
+            data.addRow([obj.SprintNumber, obj.MyScore, obj.CompareScore]);
+        });
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div_company'));
+        chart.draw(data, options);
+    }
+
+    $(document).ready(function () {
+    
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            alert("heree");
+            var target = $(e.target).attr("href") // activated tab
+            switch (target) {
+                case "#withteam":
+                    drawChartTeam();
+                    break;
+                case "#withcompany":
+                    drawChartCompany();
+                    break;
+                default:
+            }
+        });
+    });
+
+
+</script>
+
+<div class="row">
+    <div id="exTab2" class="container">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#withteam" data-toggle="tab">Self With Team</a>
+            </li>
+            <li>
+                <a href="#withcompany" data-toggle="tab">Self with Company</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="withteam">
+                <div id="chart_div_team" style=""></div>
+            </div>
+            <div class="tab-pane" id="withcompany">
+                <div id="chart_div_company" style=""></div>
+            </div>
+        </div>
+    </div>
+</div>

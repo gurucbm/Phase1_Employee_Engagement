@@ -1,0 +1,147 @@
+﻿@using HappyBuddhaSite.Core.Data;
+@using Microsoft.AspNetCore.Identity;
+
+@inject UserManager<User> UserManager;
+
+@{
+	User _CurrentUser = this.UserManager.GetUserAsync(this.User).Result;
+
+	String _CurrentUser_DisplayName = "Register";
+
+	if (_CurrentUser != default(User))
+	{
+		_CurrentUser_DisplayName = _CurrentUser.NickName ?? _CurrentUser.UserName ?? _CurrentUser.NickName ?? _CurrentUser.LastName + ", " + _CurrentUser.FirstName;
+		String _CurrentUser_Title = _CurrentUser.Level?.ToString() ?? _CurrentUser.Tribe?.Title ?? "<no-title>";
+	}
+}
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+				Menu <i class="fa fa-bars"></i>
+			</button>
+			<!--<a class="navbar-brand page-scroll" href="#top">
+				<i class="fa fa-play-circle"></i> <span class="light">Start</span> HB
+			</a>-->
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+			<ul class="nav navbar-nav">
+				<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+				<li class="hidden">
+					<a href="#page-top"></a>
+				</li>
+				<li>
+					<a class="page-scroll" href="#about" style="font-weight:900; opacity:0.9">About</a>
+				</li>
+				<li>
+					@if (_CurrentUser != default(User))
+					{
+					<a class="page-scroll" href="@Url.Action("LogOff", "Account")" style="font-weight:900; opacity:0.9">Logout</a>
+					}
+					else
+					{
+						<a class="page-scroll" href="@Url.Action("LogIn", "Account")" style="font-weight:900; opacity:0.9">Login</a>
+					}
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+</nav>
+
+@*<div class="icon-bar-container" data-bind="controller: 'Navbar'">
+	<div class="icon-bar">
+		<a class="configure-account" href="@Url.Action("Account", "Configure")"><span style="vertical-align:middle; border-width:3px; background-image:url('/api/Avatar/Current')" class="Avatar-Icon active"></span></a>
+		<div data-bind="foreach: Items">
+			<a data-bind="css: { 'active': IsActive }, attr: { href: Href }"><i class="fa " data-bind="attr: { 'class': 'fa fa-' + Icon }"></i></a>
+		</div>
+	</div>
+</div>*@
+
+@*<nav class="navbar-default navbar-static-side" role="navigation">
+		<div class="sidebar-collapse">
+			<ul class="nav" id="side-menu">
+				<li class="nav-header">
+					<div class="profile-element text-center">
+						<div id="avatar-holder">
+
+						</div>
+						<div>
+							<span class="block m-t-sm">
+								<a class="font-bold" href="@Url.Action("Account", "Configure")">@_CurrentUser_DisplayName</a>
+							</span>
+						</div>
+						<form asp-controller="Account" asp-action="LogOff" method="post" >
+							<button class="btn btn-link" type="submit">
+								<i class="fa fa-sign-out"></i> Log off
+							</button>
+						</form>
+					</div>
+				</li>
+
+				<li class="@Html.IsSelected(controller: "Home")">
+					<a href="@Url.Action("Index", "Home")"><i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span></a>
+				</li>
+				<li class="@Html.IsSelected(controller: "Configure")">
+					<a href="@Url.Action("Index", "Configure")"><i class="fa fa-cog"></i> <span class="nav-label">Configure</span> <span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level">
+						<li class="@Html.IsSelected(action: "Account")">    <a href="@Url.Action("Account", "Configure")">Account</a></li>
+						<li class="@Html.IsSelected(action: "Team")">       <a href="@Url.Action("Team", "Configure")">Team</a></li>
+						<li class="@Html.IsSelected(action: "Sprint")">     <a href="@Url.Action("Sprint", "Configure")">Team Sprints</a></li>
+					</ul>
+				</li>
+
+				<li class="@Html.IsSelected(controller: "Reviews")">
+					<a href="@Url.Action("Sprint", "Reviews")"><i class="fa fa-edit"></i> <span class="nav-label">Review Sprints</span></a>
+				</li>
+
+				<li class="@Html.IsSelected(controller: "Reviews")">
+					<a href="@Url.Action("Index", "Reviews")">
+						<i class="fa fa-balance-scale"></i> <span class="nav-label">Reviews</span>
+						<span class="fa arrow"></span>
+					</a>
+					<ul class="nav nav-second-level">
+						<li class="@Html.IsSelected(action: "Members")"><a href="@Url.Action("Members", "Reviews")">Members</a></li>
+						<li class="@Html.IsSelected(action: "Teams")">   <a href="@Url.Action("Teams", "Reviews")">Teams</a></li>
+						<li class="@Html.IsSelected(action: "Summaries")"><a href="@Url.Action("Summaries", "Reviews")">Summaries</a></li>
+					</ul>
+				</li>
+
+
+				<li class="@Html.IsSelected(controller: "History")">
+					<a href="@Url.Action("Review", "History")"><i class="fa fa-table"></i> <span class="nav-label">History</span><span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level">
+						<li class="@Html.IsSelected(action: "Personal")"><a href="@Url.Action("Personal", "History")">My Entries</a></li>
+						<li class="@Html.IsSelected(action: "Team")">   <a href="@Url.Action("Team", "History")">Team Sprints</a></li>
+						<li class="@Html.IsSelected(action: "Reviews")"><a href="@Url.Action("Reviews", "History")">Member Reviews</a></li>
+					</ul>
+				</li>
+
+				<li class="@Html.IsSelected(controller: "Reports")">
+					<a href="@Url.Action("ByDirector", "Reports")"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Reports</span><span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level">
+						<li class="@Html.IsSelected(action: "ByDirector")"> <a href="@Url.Action("ByDirector",  "Reports")">By Director</a></li>
+						<li class="@Html.IsSelected(action: "ByTeam")">     <a href="@Url.Action("ByTeam",      "Reports")">By Team</a></li>
+						<li class="@Html.IsSelected(action: "ByTribe")">    <a href="@Url.Action("ByTribe",     "Reports")">By Tribe</a></li>
+						<li class="@Html.IsSelected(action: "ByStaff")">    <a href="@Url.Action("ByStaff",     "Reports")">By Tribe</a></li>
+					</ul>
+				</li>
+
+				<li class="@Html.IsSelected(controller: "Administer")">
+					<a href="@Url.Action("Index", "Administer")"><i class="fa fa-sitemap"></i> <span class="nav-label">Administer</span><span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level">
+						<li class="@Html.IsSelected(action: "Locations")"> <a href="@Url.Action("Locations", "Administer")">Locations</a></li>
+						<li class="@Html.IsSelected(action: "Teams")">     <a href="@Url.Action("Teams", "Administer")">Teams</a></li>
+						<li class="@Html.IsSelected(action: "Tribes")">    <a href="@Url.Action("Tribes", "Administer")">Tribes</a></li>
+						<li class="@Html.IsSelected(action: "Levels")">    <a href="@Url.Action("Levels", "Administer")">User Levels</a></li>
+						<li class="@Html.IsSelected(action: "Users")">     <a href="@Url.Action("Users", "Administer")">Users</a></li>
+						<li class="@Html.IsSelected(action: "Roles")">     <a href="@Url.Action("Roles", "Administer")">Roles</a></li>
+					</ul>
+				</li>
+
+			</ul>
+		</div>
+	</nav>*@

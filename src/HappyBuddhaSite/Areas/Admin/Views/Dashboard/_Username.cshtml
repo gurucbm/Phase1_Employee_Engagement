@@ -1,0 +1,14 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+@using HappyBuddhaSite.Core.Data
+
+@inject UserManager<User> UserManager
+
+@{
+	User CurrentUser = UserManager.GetUserAsync(this.User).Result;
+}
+<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+	<div href="#" class="Avatar-Icon" style="background-image: url('/api/Avatar/Current'); width:30px; height:30px"></div>
+	<span class="username">@CurrentUser.FirstName @CurrentUser.LastName</span>
+	<b class="caret"></b>
+</a>
