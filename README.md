@@ -2,6 +2,7 @@ EmployeeEngagement Solution for Agile methodology. Gives the users the ability t
 Agile teams are flexible and move at high speed when the ones that work actively improve themselves and their processses move quickly.
 This is here to help them improve, by supporting them in their sprint reviews, and giving employees real-time insight into 
 how they are doing and how their teams, tribes and peers feel about the work being done and the direction of their efforts.
+It has MultiVariateTesting helpers - Multivariate testing is a technique for testing a hypothesis in which multiple variables are modified. The goal of multivariate testing is to determine which combination of variations performs the best out of all of the possible combinations.
 
 Technologies - ASP.NET CORE with MVC, Entity Framework, SQL Server
 
