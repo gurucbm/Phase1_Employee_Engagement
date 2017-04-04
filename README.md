@@ -25,7 +25,10 @@ The project is split into 3 parts:
 	* Data Scripts and Migrations - /src/HappyBuddhaSite/Data-Scripts/  and  /src/HappyBuddhaSite/Migrations/
 	* Static files like js, images, etc -/src/HappyBuddhaSite/wwwroot/
 	* Resources file (translations) - /src/HappyBuddhaSite/Resources/
-	
+	* Helpers (for MVT) - /src/HappyBuddhaSite/Helpers/SplitProvider.cs
+		> /src/HappyBuddhaSite/Helpers/SplitProvider.cs - MultivariateTesting - Generates the splits
+		> /src/HappyBuddhaSite/Helpers/SplitHelper.cs - MultivariateTesting - The core logic for split implementation
+		> /src/HappyBuddhaSite/Helpers/SplitDefinition.cs - MultivariateTesting - Defines the splits for the app
 	
 Build files PowerScript - /Build/*
 					
